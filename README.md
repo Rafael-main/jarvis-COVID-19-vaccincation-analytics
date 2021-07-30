@@ -1,6 +1,6 @@
 # Jarvis COVID-19 & Vaccination Analytics
 
-##### A COVID-19 Analytical Mapper
+A COVID-19 Analytical Mapper
 
 ## How to Setup Locally
 
@@ -10,7 +10,7 @@
    `git clone <URL OF THE FORKED REPO>`
 
 3. Navigate to local repository
-   `cd covid19-analytical-mapper`
+   `cd jarvis-COVID-19-vaccincation-analytics`
 
 4. Only optional. Checkout from the current branch and create a new one.
    `git checkout -b <branch_name>`
