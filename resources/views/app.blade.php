@@ -7,9 +7,9 @@
         <title>Jarvis COVID-19 & Vaccination Tracker</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">        
-    
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="/css/index.css">
     </head>
     <body class="antialiased">
         <div id="app"></div>
