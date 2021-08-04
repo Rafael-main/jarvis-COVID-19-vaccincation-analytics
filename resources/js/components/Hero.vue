@@ -3,7 +3,7 @@
         <div class="container-fluid col d-flex align-items-center">
             <div class="container-fluid mt-5">
                 <h2 class="ml-1 text-dark">Jarvis</h2>
-                <h1 class="display-4">Covid and chucasdfajnsdjhu</h1>
+                <h1 class="display-4">Covid and</h1>
                 <h1 class="display-4">Vaccination Tracker</h1>
                 <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                     Nunc id est in ex sollicitudin tempus. Vestibulum placerat est lacus, 
