@@ -13,3 +13,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/resources/sass/app.scss
+/resources/sass/_variables.scss
+/resources/sass/_functions.scss
+

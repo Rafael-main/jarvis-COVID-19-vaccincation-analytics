@@ -23,17 +23,21 @@
         </nav>
         <Hero />
         <FirstGraph />
+        <SymptomVaccine />
     </div>
 </template>
 
 <script>
 import Hero from '../components/Hero'
 import FirstGraph from '../components/FirstGraph'
+import SymptomVaccine from '../components/SymptomVaccine'
+
 export default {
         name: "App",
         components: {
             Hero,
-            FirstGraph
+            FirstGraph,
+            SymptomVaccine
         },
 
         data() {

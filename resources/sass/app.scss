@@ -1,8 +1,18 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
-// Variables
-@import 'variables';
-
+// Functions & Variables
+@import './functions';
+@import './variables';
+$custom-theme-colors: ( "altlight": #f2ebfa,
+"altdark": #522192,
+"lightgreen": #DDF560,
+"yellow": #FEFA33,
+"lightorange": #F9D73F,
+"orange": #FCAD35,
+"lightred": #FD7A7A,
+"jarvisgreen": #0dffb5);
+$theme-colors: map-merge($custom-theme-colors,
+$theme-colors);
+//change 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import 'c:/Users/andre/Desktop/Mesasix/jarvis-COVID-19-vaccincation-analytics/node_modules/bootstrap/scss/bootstrap';
