@@ -13,6 +13,8 @@ $custom-theme-colors: ( "altlight": #f2ebfa,
 "jarvisgreen": #0dffb5);
 $theme-colors: map-merge($custom-theme-colors,
 $theme-colors);
-//change 
+
+
+//change local directory before enabling Live SASS Compiler
 // Bootstrap
 @import 'c:/Users/andre/Desktop/Mesasix/jarvis-COVID-19-vaccincation-analytics/node_modules/bootstrap/scss/bootstrap';
