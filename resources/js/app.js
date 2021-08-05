@@ -1,6 +1,12 @@
 require('./bootstrap');
 
+
 import { createApp } from 'vue';
 import App from './views/Home';
+import VueApexCharts from "vue3-apexcharts";
 
-createApp(App).mount("#app")
+
+
+const app = createApp(App)
+app.use(VueApexCharts)
+app.mount("#app")
