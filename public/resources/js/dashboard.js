@@ -21083,7 +21083,7 @@ var _hoisted_1 = {
   "class": "container"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"row justify-content-center mt-5\"><div class=\"col-md-8\"><div class=\"card\"><div class=\"card-header\">Landing Page</div><div class=\"card-body\"><a href=\"/dashboard\"><button class=\"btn btn-primary\">To Dashboard</button></a></div></div></div></div>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"row justify-content-center mt-5\"><div class=\"col-md-8\"><div class=\"card\"><div class=\"card-header\">To Dashboard</div><div class=\"card-body\"><a href=\"/dashboard\"><button class=\"btn btn-primary\">To Dashboard</button></a></div></div></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [_hoisted_2]);
@@ -57457,7 +57457,7 @@ function compileToFunction(template, options) {
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/js/app": 0,
+/******/ 			"/resources/js/dashboard": 0,
 /******/ 			"css/app": 0
 /******/ 		};
 /******/ 		

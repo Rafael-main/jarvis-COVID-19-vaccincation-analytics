@@ -1,7 +1,6 @@
 require('./bootstrap');
-
 import { createApp } from 'vue';
-import App from './App.vue';
+import Dashboard from "./Dashboard.vue";
 
-const app = createApp(App)
+const app = createApp(Dashboard)
 app.mount('#app')
