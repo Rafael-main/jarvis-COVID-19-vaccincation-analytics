@@ -8,9 +8,9 @@
                 <h3>Confirmed Cases Nation Wide</h3>
             </div> 
         </div>
-        <div class="container-fluid row graph-frame">
-            <div class="col-4 d-flex justify-content-center">
-               <div class="d-flex p-0 flex-column">
+        <div class="container-fluid m-0 p-0 row graph-frame">
+            <div class="col-4 d-flex btns-div justify-content-center">
+               <div class="d-flex p-0 btns flex-column">
                    <button class="btn p-0 mb-3 text-start" @click="changeCases('active')">
                         <div class="card active-card">
                             <div class="card-body p-0 row">
@@ -41,9 +41,9 @@
                    
                </div>
             </div>
-            <div class="col d-flex justify-content-center pb-5">
-                <div class="card graph-card p-1">
-                    <div class="container-fluid d-flex justify-content-end mt-1">
+            <div class="col-8 graph-div m-0 p-4 pt-1">
+                <div class="card d-flex h-100 graph-card p-1">
+                    <div class="container d-flex justify-content-end mt-1">
                         <div class="me-2">
                             <select class="form-select" aria-label="Default select" v-model="chartOpt" @change="changeChartType">
                                 <option value="line">Line</option>
@@ -52,8 +52,8 @@
                             </select>
                         </div>
                      </div>
-                    <div class="card-body d-flex align-items-center">
-                        <apexchart width="800" height="320" :options="options" :series="series"></apexchart>
+                    <div class="container-fluid card-body">
+                        <apexchart height="320" :options="options" :series="series"></apexchart>
                     </div>
                 </div>
                 
@@ -75,6 +75,8 @@ export default {
                     dead:'',
                     options: {
                         chart: {
+                        width: '100%',
+                        height: '100%',
                         type: 'line',
                         id: 'nationwide-cases',
                         },
@@ -87,7 +89,7 @@ export default {
                         },
                         xaxis: {
                         categories: []
-                        }
+                        },
                     },
                     series: [{
                         name: '',
@@ -142,7 +144,7 @@ export default {
             },
             changeChartType(){
                 if(this.chartOpt){
-                    this.options = { chart :{type : this.chartOpt}}
+                    this.options = { chart :{type : this.chartOpt} }
                 }
             },
             changeCases(type){
@@ -291,6 +293,81 @@ export default {
     }
 
 
+    @media (max-width: 991px) and (min-width: 768px) {
+        .land-body .graph-frame .card {
+        font-size: 2em !important;
+        }
+    }
 
-   
+    @media (max-width: 767px) and (min-width: 600px) {
+        .land-body .graph-frame .card {
+        font-size: 2em !important;
+        }
+
+        .land-body .graph-frame{
+            margin: 0 !important;
+            padding: 0 !important;
+            display:grid !important;
+            grid-auto-flow: row !important;
+        }
+        .land-body .graph-frame .btns-div{
+           padding: 0 !important;
+            margin: 0 !important; 
+            display:block !important;
+        }
+        .land-body .graph-frame .btns-div .btns{
+            margin-left: 1em !important;
+            width: 90vw !important;
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content:space-between;
+            padding:1em !important;
+        }
+        .land-body .graph-frame .btns-div .btns .view-btn{
+            padding:0 !important;
+            margin:1em !important;
+        }
+
+        .land-body .graph-frame .graph-div{
+            width:95vw !important;
+            padding:1em !important;
+            margin:.5em !important;
+        }
+    }
+
+    @media only screen and (max-width: 599px) {
+        .land-body .graph-frame .card {
+        font-size: 1em !important;
+        }
+
+        .land-body .graph-frame{
+            margin: 0 !important;
+            padding: 0 !important;
+            display:grid !important;
+            grid-auto-flow: row !important;
+        }
+        .land-body .graph-frame .btns-div{
+           padding: 0 !important;
+            margin: 0 !important; 
+            display:block !important;
+        }
+        .land-body .graph-frame .btns-div .btns{
+            margin-left: 1em !important;
+            width: 90vw !important;
+            display: flex !important;
+            flex-direction: row !important;
+            justify-content:space-between;
+            padding:1em !important;
+        }
+        .land-body .graph-frame .btns-div .btns button{
+            font-size:1em !important;
+        }
+
+        .land-body .graph-frame .graph-div{
+            width:95vw !important;
+            padding:1em !important;
+            margin:.5em !important;
+        }
+    }
+
 </style>

@@ -21096,6 +21096,8 @@ __webpack_require__.r(__webpack_exports__);
       dead: '',
       options: {
         chart: {
+          width: '100%',
+          height: '100%',
           type: 'line',
           id: 'nationwide-cases'
         },
@@ -21350,13 +21352,13 @@ var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 );
 
 var _hoisted_6 = {
-  "class": "container-fluid row graph-frame"
+  "class": "container-fluid m-0 p-0 row graph-frame"
 };
 var _hoisted_7 = {
-  "class": "col-4 d-flex justify-content-center"
+  "class": "col-4 d-flex btns-div justify-content-center"
 };
 var _hoisted_8 = {
-  "class": "d-flex p-0 flex-column"
+  "class": "d-flex p-0 btns flex-column"
 };
 var _hoisted_9 = {
   "class": "card active-card"
@@ -21414,13 +21416,13 @@ var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 );
 
 var _hoisted_22 = {
-  "class": "col d-flex justify-content-center pb-5"
+  "class": "col-8 graph-div m-0 p-4 pt-1"
 };
 var _hoisted_23 = {
-  "class": "card graph-card p-1"
+  "class": "card d-flex h-100 graph-card p-1"
 };
 var _hoisted_24 = {
-  "class": "container-fluid d-flex justify-content-end mt-1"
+  "class": "container d-flex justify-content-end mt-1"
 };
 var _hoisted_25 = {
   "class": "me-2"
@@ -21445,7 +21447,7 @@ var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 );
 
 var _hoisted_29 = {
-  "class": "card-body d-flex align-items-center"
+  "class": "container-fluid card-body"
 };
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
@@ -21488,7 +21490,6 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
   }, [_hoisted_26, _hoisted_27, _hoisted_28], 544
   /* HYDRATE_EVENTS, NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.chartOpt]])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_apexchart, {
-    width: "800",
     height: "320",
     options: $data.options,
     series: $data.series
@@ -21521,7 +21522,7 @@ var _hoisted_1 = {
   "class": "container-fluid land-body row p-0 m-0"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"container-fluid brand col d-flex align-items-center\" data-v-7ebbb9e5><div class=\"container-fluid mt-5\" data-v-7ebbb9e5><h2 class=\"ml-1 text-dark\" data-v-7ebbb9e5>Jarvis</h2><h1 class=\"display-4\" data-v-7ebbb9e5>Covid-19 and</h1><h1 class=\"display-4\" data-v-7ebbb9e5>Vaccination Tracker</h1><p class=\"text-dark\" data-v-7ebbb9e5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id est in ex sollicitudin tempus. Vestibulum placerat est lacus, sed consectetur odio elementum nec.</p></div></div><div class=\"container-fluid col m-0  d-flex align-items-center\" data-v-7ebbb9e5><div class=\"container-fluid text-center mt-3\" data-v-7ebbb9e5><div data-v-7ebbb9e5><img src=\"/img/covid.png\" data-v-7ebbb9e5></div></div></div><div class=\"container m-0 p-0 arrow-frame  d-flex align-items-center position-absolute\" data-v-7ebbb9e5><div class=\"mt-0 container-fluid text-center p-0\" data-v-7ebbb9e5><a href=\"#toGraph\" class=\"scroll-btn mt-0\" name=\"scroll-btn\" data-v-7ebbb9e5><i class=\"material-icons\" data-v-7ebbb9e5>keyboard_arrow_down</i></a></div></div>", 3);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"container-fluid brand col d-flex align-items-center\" data-v-7ebbb9e5><div class=\"container-fluid mt-5 brand-div\" data-v-7ebbb9e5><h2 class=\"ml-1 text-dark\" data-v-7ebbb9e5>Jarvis</h2><h1 class=\"display-4\" data-v-7ebbb9e5>Covid-19 and</h1><h1 class=\"display-4\" data-v-7ebbb9e5>Vaccination Tracker</h1><p class=\"text-dark\" data-v-7ebbb9e5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id est in ex sollicitudin tempus. Vestibulum placerat est lacus, sed consectetur odio elementum nec.</p></div></div><div class=\"img-div container-fluid col m-0 d-flex align-items-center\" data-v-7ebbb9e5><div class=\"container-fluid text-center mt-3\" data-v-7ebbb9e5><div data-v-7ebbb9e5><img src=\"/img/covid.png\" data-v-7ebbb9e5></div></div></div><div class=\"container m-0 p-0 arrow-frame  d-flex align-items-center position-absolute\" data-v-7ebbb9e5><div class=\"mt-0 container-fluid text-center p-0\" data-v-7ebbb9e5><a href=\"#toGraph\" class=\"scroll-btn mt-0\" name=\"scroll-btn\" data-v-7ebbb9e5><i class=\"material-icons\" data-v-7ebbb9e5>keyboard_arrow_down</i></a></div></div>", 3);
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
@@ -26635,7 +26636,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.land-body[data-v-df4b2bae]{\r\n        height: 100vh;\r\n        background-color:#f7f9fb;\r\n        color: #00ce8b;\r\n        padding-top: 5em;\n}\n.land-body .graph-frame[data-v-df4b2bae] {\r\n        height:100%;\r\n        margin-top:.5em;\n}\n.land-body .graph-frame .view-btn[data-v-df4b2bae] {\r\n        margin-left:1em !important;\r\n        margin-right:1em !important;\r\n        border-radius: 0px !important;\r\n        background-color: #00ce8b;\r\n        color: white;\n}\n.land-body .graph-frame .view-btn[data-v-df4b2bae]:hover{\r\n        color: #00ce8b;\r\n        border:1px solid #00ce8b;\r\n        background-color: white;\n}\n.land-body .graph-frame .card[data-v-df4b2bae] {\r\n        font-size: 3em;\r\n        color:white;\r\n        border-radius:10px;\n}\n.land-body  .graph-frame .graph-card[data-v-df4b2bae] {\r\n        color:black !important;\n}\n.land-body .graph-frame .card .status[data-v-df4b2bae] {\r\n        color:rgba(255, 255, 255, 0.514);\n}\n.land-body .graph-frame .active-card[data-v-df4b2bae] {\r\n        background-color: #53818D ;\n}\n.land-body .graph-frame .recovered-card[data-v-df4b2bae] {\r\n        background-color: #509F83 ;\n}\n.land-body .graph-frame .died-card[data-v-df4b2bae] {\r\n        background-color: #444444 ;\n}\n.land-body .graph-frame .active-card[data-v-df4b2bae]:hover {\r\n        background-color: #69a1af ;\n}\n.land-body .graph-frame .recovered-card[data-v-df4b2bae]:hover {\r\n        background-color: #60bd9c ;\n}\n.land-body .graph-frame .died-card[data-v-df4b2bae]:hover {\r\n        background-color: #575656 ;\n}\r\n\r\n\r\n\r\n   \r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.land-body[data-v-df4b2bae]{\r\n        height: 100vh;\r\n        background-color:#f7f9fb;\r\n        color: #00ce8b;\r\n        padding-top: 5em;\n}\n.land-body .graph-frame[data-v-df4b2bae] {\r\n        height:100%;\r\n        margin-top:.5em;\n}\n.land-body .graph-frame .view-btn[data-v-df4b2bae] {\r\n        margin-left:1em !important;\r\n        margin-right:1em !important;\r\n        border-radius: 0px !important;\r\n        background-color: #00ce8b;\r\n        color: white;\n}\n.land-body .graph-frame .view-btn[data-v-df4b2bae]:hover{\r\n        color: #00ce8b;\r\n        border:1px solid #00ce8b;\r\n        background-color: white;\n}\n.land-body .graph-frame .card[data-v-df4b2bae] {\r\n        font-size: 3em;\r\n        color:white;\r\n        border-radius:10px;\n}\n.land-body  .graph-frame .graph-card[data-v-df4b2bae] {\r\n        color:black !important;\n}\n.land-body .graph-frame .card .status[data-v-df4b2bae] {\r\n        color:rgba(255, 255, 255, 0.514);\n}\n.land-body .graph-frame .active-card[data-v-df4b2bae] {\r\n        background-color: #53818D ;\n}\n.land-body .graph-frame .recovered-card[data-v-df4b2bae] {\r\n        background-color: #509F83 ;\n}\n.land-body .graph-frame .died-card[data-v-df4b2bae] {\r\n        background-color: #444444 ;\n}\n.land-body .graph-frame .active-card[data-v-df4b2bae]:hover {\r\n        background-color: #69a1af ;\n}\n.land-body .graph-frame .recovered-card[data-v-df4b2bae]:hover {\r\n        background-color: #60bd9c ;\n}\n.land-body .graph-frame .died-card[data-v-df4b2bae]:hover {\r\n        background-color: #575656 ;\n}\n@media (max-width: 991px) and (min-width: 768px) {\n.land-body .graph-frame .card[data-v-df4b2bae] {\r\n        font-size: 2em !important;\n}\n}\n@media (max-width: 767px) and (min-width: 600px) {\n.land-body .graph-frame .card[data-v-df4b2bae] {\r\n        font-size: 2em !important;\n}\n.land-body .graph-frame[data-v-df4b2bae]{\r\n            margin: 0 !important;\r\n            padding: 0 !important;\r\n            display:grid !important;\r\n            grid-auto-flow: row !important;\n}\n.land-body .graph-frame .btns-div[data-v-df4b2bae]{\r\n           padding: 0 !important;\r\n            margin: 0 !important; \r\n            display:block !important;\n}\n.land-body .graph-frame .btns-div .btns[data-v-df4b2bae]{\r\n            margin-left: 1em !important;\r\n            width: 90vw !important;\r\n            display: flex !important;\r\n            flex-direction: row !important;\r\n            justify-content:space-between;\r\n            padding:1em !important;\n}\n.land-body .graph-frame .btns-div .btns .view-btn[data-v-df4b2bae]{\r\n            padding:0 !important;\r\n            margin:1em !important;\n}\n.land-body .graph-frame .graph-div[data-v-df4b2bae]{\r\n            width:95vw !important;\r\n            padding:1em !important;\r\n            margin:.5em !important;\n}\n}\n@media only screen and (max-width: 599px) {\n.land-body .graph-frame .card[data-v-df4b2bae] {\r\n        font-size: 1em !important;\n}\n.land-body .graph-frame[data-v-df4b2bae]{\r\n            margin: 0 !important;\r\n            padding: 0 !important;\r\n            display:grid !important;\r\n            grid-auto-flow: row !important;\n}\n.land-body .graph-frame .btns-div[data-v-df4b2bae]{\r\n           padding: 0 !important;\r\n            margin: 0 !important; \r\n            display:block !important;\n}\n.land-body .graph-frame .btns-div .btns[data-v-df4b2bae]{\r\n            margin-left: 1em !important;\r\n            width: 90vw !important;\r\n            display: flex !important;\r\n            flex-direction: row !important;\r\n            justify-content:space-between;\r\n            padding:1em !important;\n}\n.land-body .graph-frame .btns-div .btns button[data-v-df4b2bae]{\r\n            font-size:1em !important;\n}\n.land-body .graph-frame .graph-div[data-v-df4b2bae]{\r\n            width:95vw !important;\r\n            padding:1em !important;\r\n            margin:.5em !important;\n}\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -26659,7 +26660,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.land-body[data-v-7ebbb9e5]{\r\n        height: 100vh;\r\n        background-color:white;\r\n        color: #00ce8b;\r\n        padding-top: 5em;\n}\n.land-body .brand h1[data-v-7ebbb9e5], h2[data-v-7ebbb9e5] {\r\n        font-weight: 800;\n}\n.land-body img[data-v-7ebbb9e5]{\r\n        height:78vh;\r\n        width:40vw;\n}\n.land-body .arrow-frame[data-v-7ebbb9e5]{\r\n        bottom: 0;\n}\n.land-body .scroll-btn[data-v-7ebbb9e5]{\r\n         bottom: 0;\r\n         border:none;\r\n         background:none;\n}\n.land-body .scroll-btn .material-icons[data-v-7ebbb9e5]{\r\n        bottom: 0;\r\n        color: #00ce8b;\r\n        font-size:8em;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.land-body[data-v-7ebbb9e5]{\r\n        height: 100vh;\r\n        background-color:white;\r\n        color: #00ce8b;\r\n        padding-top: 5em;\n}\n.land-body .brand h1[data-v-7ebbb9e5], h2[data-v-7ebbb9e5] {\r\n        font-weight: 800;\n}\n.land-body img[data-v-7ebbb9e5]{\r\n        height:78vh;\r\n        width:40vw;\n}\n.land-body .arrow-frame[data-v-7ebbb9e5]{\r\n        bottom: 0;\n}\n.land-body .scroll-btn[data-v-7ebbb9e5]{\r\n         bottom: 0;\r\n         border:none;\r\n         background:none;\n}\n.land-body .scroll-btn .material-icons[data-v-7ebbb9e5]{\r\n        bottom: 0;\r\n        color: #00ce8b;\r\n        font-size:8em;\n}\n@media (max-width: 1125px) and (min-width: 992px){\n.land-body img[data-v-7ebbb9e5]{\r\n            height:60vh;\n}\n}\n@media (max-width: 991px) and (min-width: 768px) {\n.land-body .img-div img[data-v-7ebbb9e5]{\r\n            height:40vh !important;\n}\n}\n@media (max-width: 767px) and (min-width: 600px) {\n.land-body .img-div[data-v-7ebbb9e5]{\r\n            display: none !important;\n}\n.land-body[data-v-7ebbb9e5]{\r\n            text-align: center !important;\n}\n}\n@media only screen and (max-width: 599px) {\n.land-body .img-div[data-v-7ebbb9e5]{\r\n            display: none !important;\n}\n.land-body[data-v-7ebbb9e5]{\r\n            text-align: center !important;\n}\n.land-body .brand .brand-div[data-v-7ebbb9e5]{\r\n            margin-top:0px !important;\n}\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

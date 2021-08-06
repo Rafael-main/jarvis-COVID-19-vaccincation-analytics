@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid land-body row p-0 m-0">
         <div class="container-fluid brand col d-flex align-items-center">
-            <div class="container-fluid mt-5">
+            <div class="container-fluid mt-5 brand-div">
                 <h2 class="ml-1 text-dark">Jarvis</h2>
                 <h1 class="display-4">Covid-19 and</h1>
                 <h1 class="display-4">Vaccination Tracker</h1>
@@ -10,7 +10,7 @@
                     sed consectetur odio elementum nec.</p>
             </div>
         </div>
-        <div class="container-fluid col m-0  d-flex align-items-center">
+        <div class="img-div container-fluid col m-0 d-flex align-items-center">
              <div class="container-fluid text-center mt-3">
                 <div>
                     <img src="/img/covid.png">
@@ -37,9 +37,6 @@
         color: #00ce8b;
         padding-top: 5em;
     }
-
-
-
     .land-body .brand h1, h2 {
         font-weight: 800;    
         }
@@ -62,4 +59,40 @@
         color: #00ce8b;
         font-size:8em;
      }
+
+
+    @media (max-width: 1125px) and (min-width: 992px){
+        .land-body img{
+            height:60vh;
+        }
+    }
+
+    @media (max-width: 991px) and (min-width: 768px) {
+        .land-body .img-div img{
+            height:40vh !important;
+        }
+    }
+
+    @media (max-width: 767px) and (min-width: 600px) {
+        .land-body .img-div{
+            display: none !important;
+        }
+
+        .land-body{
+            text-align: center !important;
+        }
+    }
+
+    @media only screen and (max-width: 599px) {
+        .land-body .img-div{
+            display: none !important;
+        }
+
+        .land-body{
+            text-align: center !important;
+        }
+        .land-body .brand .brand-div{
+            margin-top:0px !important;
+        }
+    }
 </style>
