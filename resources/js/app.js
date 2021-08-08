@@ -1,6 +1,7 @@
 require('./bootstrap');
 
 import { createApp } from 'vue';
-import App from './components/App';
+import App from './views/Home';
+import router from './router'
 
-createApp(App).mount("#app")
+createApp(App).use(router).mount("#app")
