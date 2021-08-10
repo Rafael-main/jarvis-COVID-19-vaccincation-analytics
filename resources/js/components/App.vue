@@ -1,24 +1,32 @@
 <template>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Example Component</div>
-
-                    <div class="card-body">
-                        I'm an example component.
-                    </div>
-                </div>
-            </div>
+        <div class="row">
         </div>
     </div>
+    <router-view />
 </template>
 
 <script>
+    import Register from './Register.vue'
+    import Home from '../pages/Home.vue'
+    import Individual from './Individual.vue'
+    import Establishment from './Establishment.vue'
+    import Login from './Login.vue'
+    import Map from './Map.vue'
+    import QrReader from './QrReader.vue'
+    import QrGenerator from './QrGenerator.vue'
+
     export default {
         name: "App",
-        mounted() {
-            console.log('Component mounted.')
+        components: {
+            QrReader,
+            QrGenerator,
+            Register,
+            Login,
+            Map,
+            Individual,
+            Establishment,
+            Home,
         }
     }
 </script>
