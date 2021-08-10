@@ -1,8 +1,21 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
 // Functions & Variables
-@import './functions';
-@import './variables';
+// @import './functions';
+// @import './variables';
+@import '../../node_modules/bootstrap/scss/_functions.scss';
+@import '../../node_modules/bootstrap/scss/_variables.scss';
 $custom-theme-colors: ( "altlight": #f2ebfa,
 "altdark": #522192,
 "lightgreen": #DDF560,
@@ -17,4 +30,5 @@ $theme-colors);
 
 //change local directory before enabling Live SASS Compiler
 // Bootstrap
-@import 'c:/Users/andre/Desktop/Mesasix/jarvis-COVID-19-vaccincation-analytics/node_modules/bootstrap/scss/bootstrap';
+// @import 'c:/Users/andre/Desktop/Mesasix/jarvis-COVID-19-vaccincation-analytics/node_modules/bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap';

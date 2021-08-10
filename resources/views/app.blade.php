@@ -9,8 +9,9 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="/resources/css/app.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        {{-- <link href="/resources/css/app.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/index.css"> --}}
 
     </head>
     <body class="antialiased">
