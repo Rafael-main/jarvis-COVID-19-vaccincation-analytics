@@ -20,4 +20,8 @@ class Establishment extends Model
     {
         return $this->hasOne(Address::class);
     }
+    public function visitedAt()
+    {
+        return $this->hasOne(VisitedAt::class);
+    }
 }

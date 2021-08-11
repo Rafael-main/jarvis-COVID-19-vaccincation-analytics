@@ -8,7 +8,7 @@
 
 <script>
     import Register from './Register.vue'
-    import Home from '../pages/Home.vue'
+    import Home from '../views/Home.vue'
     import Individual from './Individual.vue'
     import Establishment from './Establishment.vue'
     import Login from './Login.vue'

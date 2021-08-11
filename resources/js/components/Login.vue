@@ -1,26 +1,28 @@
 <template>
-    <div class="d-flex justify-content-start mw-100 mt-2 mb-2">
+    <div class="container-fluid d-flex justify-content-center w-50 mw-100 mt-2 mb-2 border rounded-3 broder-gray shadow">
         <router-link class="mb-3" to="/">Home</router-link>
-        <router-link class="mb-3" to="/login">Login</router-link>
-        <router-link class="mb-3" to="/register">Register</router-link>
-        <div class="container-sm border w-50 rounded-3 border-gray shadow">
-            <div class="text-center mt-2">
-                <h1 class="mt-2 mb-2">Login</h1>
-                <p class="mt-2 mb-2">No Account? <a href="#">Sign Up</a></p>
+        <div class="row">
+            <div class="col">
+                <div class="text-center mt-2">
+                    <h3 class="mt-2 mb-2">Sign in</h3>
+                    <p class="user-select-none text-black-50">Do not have an account? <router-link class="mt-2 mb-2" to="/register">Sign up</router-link></p>
+                </div>
+                <form @submit.prevent="onSubmitLogin" class="row g-3 p-2">
+                    <div class="form-floating mb-3 col-12">
+                        <input type="email" v-model="emailAddress" class="form-control user-select-none" id="email_address" name="emailAddress" placeholder="Email Address" required>
+                        <label class="text-black-50" for="email_address">Email Address</label>
+                    </div>
+                    <div class="form-floating mb-3 col-12">
+                        <input type="password" v-model="password" class="form-control user-select-none" id="password" name="password" placeholder="Password" required>
+                        <label class="text-black-50" for="password">Password</label>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <div class="d-grip gap-2">
+                            <input type="submit" class="btn btn-jarvisgreen border rounded-3 text-light" value="Sign In">
+                        </div>
+                    </div>
+                </form>
             </div>
-            <form @submit.prevent="onSubmitLogin" class="row g-3 m-2 p-2">
-                <div class="form-floating mb-3 col-12">
-                    <input type="email" v-model="emailAddress" class="form-control" id="email_address" name="emailAddress" placeholder="Email Address" required>
-                    <label for="email_address">Email Address</label>
-                </div>
-                <div class="form-floating mb-3 col-12">
-                    <input type="password" v-model="password" class="form-control" id="password" name="password" placeholder="Password" required>
-                    <label for="password">Password</label>
-                </div>
-                <div class="d-grip gap-2 mb-3 col-12">
-                    <input type="submit" class="btn btn-primary border rounded-3" value="Sign In">
-                </div>
-            </form>
         </div>
     </div>
 </template>
@@ -46,11 +48,6 @@
                     axios.post('api/login', {
                         email: emailAddress.value,
                         password: password.value
-                    },
-                    {
-                        headers: {
-                            'Content-Type': 'application/json'
-                        }
                     })
                     .then(function(response) {
                         console.log(response.data)
@@ -75,3 +72,12 @@
         }
     }
 </script>
+
+
+<style scoped>
+
+.form-control:focus {
+  border-color: #0dffb5;
+  box-shadow: inset 0 1px 1px rgba(13, 255, 181, 1), 0 0 8px rgba(13, 255, 181, 1);
+}
+</style>

@@ -16,11 +16,11 @@ class VisitorResource extends JsonResource
     {
         return [
             'id' => (string)$this->id,
-            'type' => 'Individual',
+            'type' => 'Visitor',
             'attributes' => [
-                'firstname' => $this->first_name,
-                'middlename' => $this->middle_name,
-                'lastname' => $this->last_name,
+                'first_name' => $this->first_name,
+                'middle_name' => $this->middle_name,
+                'last_name' => $this->last_name,
                 'suffix' => $this->suffix_name,
                 'gender' => $this->gender,
                 'birth_month' => $this->birth_month,

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Http\Resources\VisitedAtResource;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -32,5 +33,9 @@ class Visitor extends Model
     public function address()
     {
         return $this->hasOne(Address::class);
+    }
+    public function visitedAt()
+    {
+        return $this->hasOne(VisitedAt::class);
     }
 }

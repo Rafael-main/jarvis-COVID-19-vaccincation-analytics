@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Http\Requests\UserRequest;
-use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Auth;
@@ -19,7 +18,7 @@ class AutheController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => $request->password,
+            'password' => bcrypt($request->password),
             'remember_token' => Str::random(60)
         ]);
 
@@ -30,12 +29,12 @@ class AutheController extends Controller
 
     public function login(Request $request)
     {
-        $request->validate([
+
+
+        $credentials = $request->validate([
             'email' => 'required',
             'password' => 'required'
         ]);
-
-        $credentials = $request->only('email', 'password');
 
         if (!Auth::attempt($credentials)) {
             return $this->error('Credentials not match', 401);
@@ -49,7 +48,7 @@ class AutheController extends Controller
             ]);
         }
 
-        return $user->createToken($request->device_name)->plainTextToken;
+        return $user->createToken('myapptoken')->plainTextToken;
     }
 
 

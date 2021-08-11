@@ -14,4 +14,13 @@ class VisitedAt extends Model
         'establishment_id',
         'entered_at'
     ];
+
+    public function visitor()
+    {
+        return $this->belongsTo(Visitor::class);
+    }
+    public function establishment()
+    {
+        return $this->belongsTo(Establishment::class);
+    }
 }

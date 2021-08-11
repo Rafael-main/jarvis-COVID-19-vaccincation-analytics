@@ -1,6 +1,14 @@
 <template>
-    <div class="container">
-        <qrcode-stream @decode="onDecode" @init="onInit"></qrcode-stream>
+    <div class="container-fluid d-flex justify-content-center w-75 mw-100 mt-5">
+        <div class="row">
+            <div class="col-12 mt-5 mb-3">
+                <qrcode-stream @decode="onDecode" @init="onInit"></qrcode-stream>
+            </div>
+            <div class="col-12 mb-3">
+                <h3 class="user-select-none">Place the QR code at the center of the camera</h3>
+                <p class="text-black-50"> By doing so, it would read the qualified QR code.</p>
+            </div>
+        </div>
     </div>
 </template>
 

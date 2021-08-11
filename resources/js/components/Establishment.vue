@@ -59,3 +59,11 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+
+.form-control:focus {
+  border-color: #0dffb5;
+  box-shadow: inset 0 1px 1px rgba(13, 255, 181, 1), 0 0 8px rgba(13, 255, 181, 1);
+}
+</style>

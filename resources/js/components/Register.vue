@@ -1,12 +1,11 @@
 <template>
     <div class="container-fluid d-flex justify-content-center w-50 mw-100 m-auto">
         <router-link class="mb-3" to="/">Home</router-link>
-        <router-link class="mb-3" to="/login">Login</router-link>
-        <router-link class="mb-3" to="/register">Register</router-link>
         <div class="row">
             <div class="col mt-2 mb-3">
                 <div class="mb-3">
                     <h4 class="mb-3">Signing Up!</h4>
+                    <p class="user-select-none text-black-50">Already have an account? <router-link to="/login">Sign In</router-link></p>
                     <form @submit.prevent="onSubmitRegisterForm" action="#" class="row g-3">
                         <div class="form-floating col-md-6 mb-3">
                             <input type="text" class="form-control user-select-none" id="username" v-model="username" placeholder="Username" required>
@@ -22,7 +21,7 @@
                             <password-meter class="mt-2" :password="passsword" />
                         </div> 
                         <div class="col-12 mb-3 d-flex justify-content-end">
-                            <input type="submit" value="Sign me up!" class="btn btn-primary">
+                            <input type="submit" value="Sign me up!" class="btn btn-jarvisgreen text-light">
                         </div>
                     </form>
                 </div>
@@ -78,4 +77,44 @@
         },  
     }
 </script>
+
+<style scoped>
+
+.form-control:focus {
+  border-color: #0dffb5;
+  box-shadow: inset 0 1px 1px rgba(13, 255, 181, 1), 0 0 8px rgba(13, 255, 181, 1);
+}
+
+.po-password-strength-bar {
+    border-radius: 2px;
+    transition: all 0.2s linear;
+    height: 5px;
+    margin-top: 8px;
+}
+
+.po-password-strength-bar.risky {
+    background-color: #f95e68;
+    width: 10%;
+}
+
+.po-password-strength-bar.guessable {
+    background-color: #fb964d;
+    width: 32.5%;
+}
+
+.po-password-strength-bar.weak {
+    background-color: #fdd244;
+    width: 55%;
+}
+
+.po-password-strength-bar.safe {
+    background-color: #b0dc53;
+    width: 77.5%;
+}
+
+.po-password-strength-bar.secure {
+    background-color: #35cc62;
+    width: 100%;
+}
+</style>
 
