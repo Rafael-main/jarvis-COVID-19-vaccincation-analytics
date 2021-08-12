@@ -45,13 +45,13 @@
 
                 axios.get('/sanctum/csrf-cookie')
                 .then(response => {
-                    axios.post('api/login', {
+                    axios.post('/api/login', {
                         email: emailAddress.value,
                         password: password.value
                     })
                     .then(function(response) {
                         console.log(response.data)
-                        localStorage.setItem('token', response.data)
+                        // localStorage.setItem('token', response.data)
                         router.push({
                             path: '/dashboard'
                         })

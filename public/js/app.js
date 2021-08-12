@@ -21456,12 +21456,12 @@ __webpack_require__.r(__webpack_exports__);
 
     function onSubmitLogin() {
       axios__WEBPACK_IMPORTED_MODULE_0___default().get('/sanctum/csrf-cookie').then(function (response) {
-        axios__WEBPACK_IMPORTED_MODULE_0___default().post('api/login', {
+        axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/login', {
           email: emailAddress.value,
           password: password.value
         }).then(function (response) {
-          console.log(response.data);
-          localStorage.setItem('token', response.data);
+          console.log(response.data); // localStorage.setItem('token', response.data)
+
           router.push({
             path: '/dashboard'
           });
