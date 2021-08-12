@@ -26,6 +26,9 @@
         "vue-loader": "^16.3.3"
     },
     "dependencies": {
-        "vue-router": "^4.0.10"
+        "apexcharts": "^3.27.3",
+        "chart.js": "^3.5.0",
+        "vue-router": "^4.0.10",
+        "vue3-apexcharts": "^1.4.1"
     }
 }
