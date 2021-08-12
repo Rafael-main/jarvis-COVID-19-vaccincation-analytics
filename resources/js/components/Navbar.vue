@@ -12,7 +12,7 @@
                         <router-link class="nav-link" aria-current="page" to="/">Home</router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Login or Sign Up</a>
+                        <router-link class="nav-link" :to="{ name: 'login' }">Login</router-link>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="#">About</a>
