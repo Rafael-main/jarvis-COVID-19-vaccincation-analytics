@@ -13,12 +13,6 @@
 import { ref, onMounted } from 'vue';
 
 export default {
-    setup() {
-        const token = localStorage.getItem('token')
-
-        return {
-            token
-        }
-    },
+    name: "Dashboard"
 }
 </script>

@@ -1,32 +1,27 @@
 <template>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <h1 class="mt-5 mb-3">You are at a Home page</h1>
-                <router-link to="/">Home</router-link>
-                <router-link to="/login">Login</router-link>
-                <router-link to="/register">Register</router-link>
-                <router-link to="/individual">Individual</router-link>
-            </div>
-            <div class="col">
-                <qr-generator />
-            </div>
-        </div>
-
-
-
+    <div class="body-main">
+        <Navbar /> 
+        <Hero />
+        <FirstGraph />
+        <SymptomVaccine />
     </div>
+    <router-view />
 </template>
 
 <script>
-    import QrReader from '../components/QrReader.vue'
-    import QrGenerator from '../components/QrGenerator.vue'
+import Hero from '../components/Hero.vue'
+import FirstGraph from '../components/FirstGraph.vue'
+import SymptomVaccine from '../components/SymptomVaccine.vue'
+import Navbar from '../components/Navbar.vue'
 
-    export default {
-        name: "Home",
+export default {
+        name: "App",
         components: {
-            QrReader,
-            QrGenerator
-        }
+            Navbar,
+            Hero,
+            FirstGraph,
+            SymptomVaccine,
+        },
+
     }
 </script>

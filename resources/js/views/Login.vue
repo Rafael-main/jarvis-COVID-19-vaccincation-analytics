@@ -1,6 +1,6 @@
 <template>
+    <Navbar />
     <div class="container-fluid d-flex justify-content-center w-50 mw-100 mt-2 mb-2 border rounded-3 broder-gray shadow">
-        <router-link class="mb-3" to="/">Home</router-link>
         <div class="row">
             <div class="col">
                 <div class="text-center mt-2">
@@ -29,6 +29,7 @@
 
 <script>
     import axios from 'axios';
+    import Navbar from '../components/Navbar.vue'
     import { useRouter, useRoute } from 'vue-router';
     import { ref } from 'vue';
 
@@ -69,6 +70,9 @@
                 password,
                 onSubmitLogin
             }
+        },
+        components: {
+            Navbar
         }
     }
 </script>

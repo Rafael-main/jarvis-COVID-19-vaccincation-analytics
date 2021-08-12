@@ -23,15 +23,18 @@
         "sass": "^1.32.11",
         "sass-loader": "^11.0.1",
         "vue": "^3.1.5",
-        "vue-loader": "^16.3.3"
+        "vue-loader": "^16.5.0"
     },
     "dependencies": {
         "mapbox-gl": "^2.4.0",
         "qrcode.vue": "^3.2.2",
         "vee-validate": "^4.4.8",
-        "vue-router": "^4.0.10",
         "vue-simple-password-meter": "^1.1.0",
         "vue3-qrcode-reader": "0.0.1",
-        "yup": "^1.0.0-alpha.2"
+        "yup": "^1.0.0-alpha.2",
+        "apexcharts": "^3.27.3",
+        "chart.js": "^2.9.4",
+        "vue-router": "^4.0.10",
+        "vue3-apexcharts": "^1.4.1"
     }
 }

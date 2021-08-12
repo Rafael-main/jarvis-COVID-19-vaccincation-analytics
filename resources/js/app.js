@@ -1,11 +1,9 @@
 require('./bootstrap');
 
+
 import { createApp } from 'vue';
-import App from './components/App.vue';
-import router from './router';
-// import axios from 'axios';
+import App from './views/Home';
+import VueApexCharts from "vue3-apexcharts";
+import router from './router'
 
-
-// axios.defaults.withCredentials = true;
-
-createApp(App).use(router).mount("#app")
+createApp(App).use(VueApexCharts).use(router).mount("#app")
