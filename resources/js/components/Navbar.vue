@@ -9,7 +9,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <!-- <a class="nav-link" aria-current="page" href="#">Home</a> -->
-                        <router-link class="nav-link" aria-current="page" to="/">Home</router-link>
+                        <router-link class="nav-link" aria-current="page" :to="{name:'Symptom'}">Home</router-link>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Login or Sign Up</a>

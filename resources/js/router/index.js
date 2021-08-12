@@ -5,7 +5,8 @@ import Vaccine from '../views/Vaccine.vue'
 
 
 
-const routes = [{
+const routes = [
+    {
         path: '/',
         name: 'Home',
         component: Home
@@ -25,8 +26,9 @@ const routes = [{
 ]
 
 const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
-    routes
-})
+    history: createWebHistory(),
+    routes: routes,
+});
+
 
 export default router
