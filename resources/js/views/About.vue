@@ -1,6 +1,5 @@
 <template>
-    <Navbar />
-    <div class="container-fluid">
+    <div class="container-fluid mt-5">
         <div class="mt-5">
             <h1>Hello There!</h1>
             <p>This is the about page.</p>
@@ -10,12 +9,9 @@
 </template>
 
 <script>
-    import Navbar from '../components/Navbar.vue'
 
     export default {
         name: "About",
-        components: {
-            Navbar
-        }
+       
     }
 </script>

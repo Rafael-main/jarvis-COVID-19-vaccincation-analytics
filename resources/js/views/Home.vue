@@ -1,23 +1,20 @@
 <template>
     <div class="body-main">
-        <Navbar /> 
         <Hero />
         <FirstGraph />
         <SymptomVaccine />
     </div>
-    <router-view />
 </template>
 
 <script>
-import Hero from '../components/Hero.vue'
-import FirstGraph from '../components/FirstGraph.vue'
-import SymptomVaccine from '../components/SymptomVaccine.vue'
-import Navbar from '../components/Navbar.vue'
+import Hero from '../components/Hero'
+import FirstGraph from '../components/FirstGraph'
+import SymptomVaccine from '../components/SymptomVaccine'
+
 
 export default {
-        name: "App",
+        name: "Home",
         components: {
-            Navbar,
             Hero,
             FirstGraph,
             SymptomVaccine,

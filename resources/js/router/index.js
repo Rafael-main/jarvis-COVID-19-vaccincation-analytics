@@ -14,32 +14,32 @@ import NotFound from '../views/NotFound.vue'
 const routes = [
     {
         path: '/',
-        name: 'home',
+        name: 'Home',
         component: Home
     },
     {
         path: '/login',
-        name: 'login',
+        name: 'Login',
         component: Login
     },
     {
         path: '/register',
-        name: 'register',
+        name: 'Register',
         component: Register
     },
     {
         path: '/individual',
-        name: 'individual',
+        name: 'Individual',
         component: Individual
     },
     {
         path: '/establishment',
-        name: 'establishment',
+        name: 'Establishment',
         component: Establishment
     },
     {
         path: '/dashboard',
-        name: 'dashboard',
+        name: 'Dsashboard',
         component: Dashboard,
         // meta: { requiresAuth: true }
     },
@@ -68,9 +68,10 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
-    routes: routes
-})
+    history: createWebHistory(),
+    routes: routes,
+});
+
 
 // function isLoggedIn() {
 //     return localStorage.getItem('token')

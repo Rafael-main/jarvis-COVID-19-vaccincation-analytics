@@ -1,8 +1,7 @@
 <template>
-    <Navbar />
-    <div class="container-fluid d-flex justify-content-center w-50 mw-100 mt-2 mb-2 border rounded-3 broder-gray shadow">
-        <div class="row">
-            <div class="col">
+    <div class="container-fluid d-flex justify-content-center w-50 mw-100 mt-5 mb-2 border rounded-3 broder-gray shadow">
+        <div class="row mt-5">
+            <div class="col mt-5">
                 <div class="text-center mt-2">
                     <h3 class="mt-2 mb-2">Sign in</h3>
                     <p class="user-select-none text-black-50">Do not have an account? <router-link class="mt-2 mb-2" to="/register">Sign up</router-link></p>
@@ -29,7 +28,6 @@
 
 <script>
     import axios from 'axios';
-    import Navbar from '../components/Navbar.vue'
     import { useRouter, useRoute } from 'vue-router';
     import { ref } from 'vue';
 
@@ -71,9 +69,6 @@
                 onSubmitLogin
             }
         },
-        components: {
-            Navbar
-        }
     }
 </script>
 

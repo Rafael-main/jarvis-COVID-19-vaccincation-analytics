@@ -1,7 +1,7 @@
 <template>
-    <nav class="navbar navbar-expand-lg fixed-top navbar-light" :class="{change_color: scrollPosition > 10}">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light mb-3" :class="{change_color: scrollPosition > 10}">
         <div class="container-fluid nav" :class="{change_color_link: scrollPosition > 10}">
-            <a class="navbar-brand" href="#"> <h4>Jarvis Covid and Vaccination Tracker</h4> </a>
+            <router-link class="navbar-brand" :to="{ name: 'Home' }"> <h4>Jarvis Covid and Vaccination Tracker</h4> </router-link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -9,23 +9,28 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <!-- <a class="nav-link" aria-current="page" href="#">Home</a> -->
-                        <router-link class="nav-link" aria-current="page" to="/">Home</router-link>
+                        <router-link class="nav-link" aria-current="page" :to="{name: 'Home'}">
+                            Home
+                        </router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" :to="{ name: 'login' }">Login</router-link>
+                        <router-link class="nav-link" :to="{ name: 'Login' }">Login</router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">About</a>
+                        <router-link class="nav-link" :to="{ name: 'About' }">About</router-link>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <div class="mt-5">
+        <router-view />
+    </div>
 </template>
 
 <script>
 export default {
-    name: "Navbar",
+    name: "App",
     data() {
         return {
         scrollPosition: null

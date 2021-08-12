@@ -10,7 +10,7 @@
                                 <h5 class="card-title">6 Clusters of COVID-19 Symptoms</h5>
                                 <p class="card-text">Take a look at some of the symptoms of COVID-19.</p>
                                 <div class="d-flex justify-content-end mr-5">
-                                    <router-link to="/symptom" class="btn btn-jarvisgreen text-light stretched-link">View</router-link>
+                                    <router-link :to="{ name: 'Symptom' }" class="btn btn-jarvisgreen text-light stretched-link">View</router-link>
                                 </div>
                             </div>
                         </div>
@@ -22,7 +22,7 @@
                                 <h5 class="card-title">Know your vaccines</h5>
                                 <p class="card-text">Take a look at some of the updated declarations of vaccines for COVID-19.</p>
                                 <div class="d-flex justify-content-end mr-5">
-                                    <router-link to="/vaccine" class="btn btn-jarvisgreen text-light stretched-link">View</router-link>
+                                    <router-link :to="{ name: 'Vaccine' }" class="btn btn-jarvisgreen text-light stretched-link">View</router-link>
                                 </div>
                             </div>
                         </div>
