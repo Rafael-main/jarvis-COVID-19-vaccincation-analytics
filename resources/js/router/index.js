@@ -3,8 +3,6 @@ import Home from '../views/Home.vue'
 import Symptom from '../views/Symptom.vue'
 import Vaccine from '../views/Vaccine.vue'
 
-
-
 const routes = [
     {
         path: '/',

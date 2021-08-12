@@ -1,6 +1,5 @@
 <template>
     <div class="body-main">
-        <Navbar /> 
         <Hero />
         <FirstGraph />
         <SymptomVaccine />
@@ -11,7 +10,7 @@
 import Hero from '../components/Hero'
 import FirstGraph from '../components/FirstGraph'
 import SymptomVaccine from '../components/SymptomVaccine'
-import Navbar from '../components/Navbar'
+
 
 export default {
         name: "App",
@@ -19,7 +18,6 @@ export default {
             Hero,
             FirstGraph,
             SymptomVaccine,
-            Navbar
         },
 
         // data() {

@@ -2,7 +2,7 @@
     <div class="body-symptomvaccine">
         <div class="container-fluid mt-5"> 
             <div class="row justify-content-center aling-items-center">
-                    <router-link to="/symptom">
+                    <router-link :to="{name: 'Symptom'}">
                     <div class="card col-5" style="width: 35rem; length:">
                         <img src="../assets/Symptom.png" class="card-img-top" alt="Symptom">
                         <div class="card-body">
@@ -11,7 +11,7 @@
                     </div>
                     </router-link>
                     
-                <router-link to="/vaccine">
+                <router-link :to="{name: 'Vaccine'}">
                     <div class="card col-5" style="width: 35rem;">
                     <img src="../assets/Symptom.png" class="card-img-top" alt="Symptom">
                     <div class="card-body">
