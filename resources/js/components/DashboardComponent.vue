@@ -208,24 +208,30 @@
             },
             showRegions () {
                 const vm = this
-                axios.get('https://covid19-api-philippines.herokuapp.com/api/top-regions')
-                .then(function (response) {
-                vm.regions = response.data.data;
+                fetch('https://covid19-api-philippines.herokuapp.com/api/top-regions', {
+                    method: 'GET'
+                })
+                .then(response => response.json())
+                .then((data) => {
+                vm.regions = data.data;
                 vm.uppercase()
                 });
             },
             defaultActive(){
                 this.series.length = 0
                 const vm = this
-                axios.get(`https://covid19-api-philippines.herokuapp.com/api/timeline?region=${this.regionValue}`)
-                .then(function (response) {
-                    let list = response.data.data
-                    let data = list.slice(Math.max(list.length - 10, 1))
+                fetch(`https://covid19-api-philippines.herokuapp.com/api/timeline?region=${this.regionValue}`, {
+                    method: 'GET'
+                })
+                .then(response => response.json())
+                .then((data) => {
+                    let list = data.data
+                    let data_array = list.slice(Math.max(list.length - 10, 1))
                     let arr = []
                     let date = []
-                    for (let index = 0; index < data.length; index++) {
-                            arr.push(data[index].cases)
-                            date.push(data[index].date)
+                    for (let index = 0; index < data_array.length; index++) {
+                            arr.push(data_array[index].cases)
+                            date.push(data_array[index].date)
                     }
                     vm.options = {
                         xaxis: {
@@ -241,15 +247,18 @@
             showActiveCases (event) {
                 if (event.target.checked) {
                     const vm = this
-                    axios.get(`https://covid19-api-philippines.herokuapp.com/api/timeline?region=${this.regionValue}`)
-                    .then(function (response) {
-                        let list = response.data.data
-                        let data = list.slice(Math.max(list.length - 10, 1))
+                    fetch(`https://covid19-api-philippines.herokuapp.com/api/timeline?region=${this.regionValue}`, {
+                        method: 'GET'
+                    })
+                    .then(response => response.json())
+                    .then((data) => {
+                        let list = data.data
+                        let data_array = list.slice(Math.max(list.length - 10, 1))
                         let arr = []
                         let date = []
                         for (let index = 0; index < data.length; index++) {
-                                arr.push(data[index].cases)
-                                date.push(data[index].date)
+                                arr.push(data_array[index].cases)
+                                date.push(data_array[index].date)
                         }
                         vm.options = {
                             xaxis: {
@@ -276,15 +285,18 @@
             showRecoveredCases (event) {
                 if (event.target.checked) {
                     const vm = this
-                    axios.get(`https://covid19-api-philippines.herokuapp.com/api/timeline?region=${this.regionValue}`)
-                    .then(function (response) {
-                        let list = response.data.data
-                        let data = list.slice(Math.max(list.length - 10, 1))
+                    fetch(`https://covid19-api-philippines.herokuapp.com/api/timeline?region=${this.regionValue}`, {
+                        method: 'GET'
+                    })
+                    .then(response => response.json())
+                    .then((data) => {
+                        let list = data.data
+                        let data_array = list.slice(Math.max(list.length - 10, 1))
                         let arr = []
                         let date = []
-                        for (let index = 0; index < data.length; index++) {
-                                arr.push(data[index].recovered)
-                                date.push(data[index].date)
+                        for (let index = 0; index < data_array.length; index++) {
+                                arr.push(data_array[index].recovered)
+                                date.push(data_array[index].date)
                         }
                         vm.options = {
                             xaxis: {
@@ -311,15 +323,18 @@
             showDeadCases (event) {
                 if (event.target.checked) {
                     const vm = this
-                    axios.get(`https://covid19-api-philippines.herokuapp.com/api/timeline?region=${this.regionValue}`)
-                    .then(function (response) {
-                        let list = response.data.data
-                        let data = list.slice(Math.max(list.length - 10, 1))
+                    fetch(`https://covid19-api-philippines.herokuapp.com/api/timeline?region=${this.regionValue}`, {
+                        method: 'GET'
+                    })
+                    .then(response => response.json())
+                    .then((data) => {
+                        let list = data.data
+                        let data_array = list.slice(Math.max(list.length - 10, 1))
                         let arr = []
                         let date = []
-                        for (let index = 0; index < data.length; index++) {
-                                arr.push(data[index].died)
-                                date.push(data[index].date)
+                        for (let index = 0; index < data_array.length; index++) {
+                                arr.push(data_array[index].died)
+                                date.push(data_array[index].date)
                         }
                         vm.options = {
                             xaxis: {

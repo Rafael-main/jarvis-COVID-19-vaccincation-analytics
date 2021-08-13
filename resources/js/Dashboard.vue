@@ -5,7 +5,7 @@
                 <button class="btn-light ms-2" @click="toggleSidebar()"><i class="bi bi-list"></i></button>
                 <a class="navbar-brand ms-2 mt-1 me-auto" href="#"> 
                     <h4>
-                    Jarvis Covid and Vaccination Tracker</h4> 
+                    Jarvis Covid-19 Tracker</h4> 
                 </a>
             </div>
         </nav>
@@ -18,7 +18,7 @@
                             <div class="list-group list-group-flush border-bottom scrollarea mt-5">
                                 <a href="#" v-for="place in worldCases" :key="place.country" class="list-group-item list-group-item-action py-3 lh-tight" name="one">
                                     <div class="row">
-                                        <div class="col-2 me-2 align-content-center justify-content-center mt-4">
+                                        <div class="container-fluid col-3 me-2 align-content-center justify-content-center mt-4">
                                             <h1>{{ place.id }}</h1>
                                         </div>
                                         <div class="col">
@@ -69,9 +69,12 @@
             },
             showWorldData(){
                  const vm = this
-                    axios.get('https://coronavirus-19-api.herokuapp.com/countries')
-                    .then(function (response) {
-                        let array = response.data
+                    fetch('https://coronavirus-19-api.herokuapp.com/countries', {
+                        method: 'GET'
+                    })
+                    .then(response => response.json())
+                    .then((data) => {
+                        let array = data
                         for (let index = 0; index < array.length; index++) {
                             array[index].id = index + 1
                             array[index].cases = array[index].cases.toLocaleString('ru-RU')
@@ -100,7 +103,7 @@
         display: block;
         overflow-y: scroll;
         position:fixed;
-        z-index:1;
+        z-index:2;
     }
 
 </style>
