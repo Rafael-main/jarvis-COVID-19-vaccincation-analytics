@@ -1,9 +1,9 @@
 <template>
         <!-- DUMMY NAVBAR KAY ARON MATANSYA ANG SUKOD SA NAVBAR UG SIDE BAR -->
-        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-jarvisgreen-dark">
             <div class="container-fluid nav">
                 <button class="btn-light ms-2" @click="toggleSidebar()">Toggle Side</button>
-                <a class="navbar-brand ms-2 mt-1 me-auto" href="#"> <h4>Jarvis Covid and Vaccination Tracker</h4> </a>
+                <a class="navbar-brand ms-2 mt-1 me-auto" href="/"> <h4>Jarvis Covid and Vaccination Tracker</h4> </a>
             </div>
         </nav>
         <div class="sidebar bg-dark fixed-left" v-if="isOpen">

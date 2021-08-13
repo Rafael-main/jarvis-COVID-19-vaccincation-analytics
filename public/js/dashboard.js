@@ -21420,7 +21420,7 @@ var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("dat
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-778157e6");
 
 var _hoisted_1 = {
-  "class": "navbar navbar-expand-lg fixed-top navbar-dark bg-dark"
+  "class": "navbar navbar-expand-lg fixed-top navbar-dark bg-jarvisgreen-dark"
 };
 var _hoisted_2 = {
   "class": "container-fluid nav"
@@ -21428,7 +21428,7 @@ var _hoisted_2 = {
 
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
   "class": "navbar-brand ms-2 mt-1 me-auto",
-  href: "#"
+  href: "/"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h4", null, "Jarvis Covid and Vaccination Tracker")], -1
 /* HOISTED */
 );
