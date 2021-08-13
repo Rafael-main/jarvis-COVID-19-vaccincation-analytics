@@ -21616,7 +21616,6 @@ __webpack_require__.r(__webpack_exports__);
         markers: {
           size: 5
         },
-        colors: [],
         title: {
           text: ''
         },

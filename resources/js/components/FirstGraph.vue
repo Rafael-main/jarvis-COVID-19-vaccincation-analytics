@@ -81,7 +81,6 @@ export default {
                         markers : {
                             size: 5,
                         },
-                        colors : [],
                         title:{
                             text: ''
                         },
