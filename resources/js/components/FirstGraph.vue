@@ -110,67 +110,47 @@ export default {
             getCases(type){
                 if(type == 'confirmed'){
                     const vm = this
-                    axios.get('https://coronavirus-19-api.herokuapp.com/countries/Philippines',
-                    {
-                        mode: 'no-cors',
-                        headers: {
-                            'Access-Control-Allow-Origin': '*',
-                            'Content-Type': 'application/json'
-                        },
-                        withCredentials: true,
-                        credentials: 'same-origin',
+                    fetch('https://coronavirus-19-api.herokuapp.com/countries/Philippines', {
+                        method: 'GET'
                     })
-                    .then(function (response) {
-                    let data = response.data.cases;
-                    vm.totalCases = data.toLocaleString('ru-RU')
+                    .then(response => response.json())
+                    .then(data =>  {
+                        let cases = data.cases;
+                        vm.totalCases = cases.toLocaleString('ru-RU')
                     });
                 }
                 else if(type == 'active'){
                     const vm = this
-                    axios.get('https://coronavirus-19-api.herokuapp.com/countries/Philippines', {
-                        mode: 'no-cors',
-                        headers: {
-                            'Access-Control-Allow-Origin': '*',
-                            'Content-Type': 'application/json'
-                        },
-                        withCredentials: true,
-                        credentials: 'same-origin',
+                    fetch('https://coronavirus-19-api.herokuapp.com/countries/Philippines', {
+                        method: 'GET'
                     })
-                    .then(function (response) {
-                    let data = response.data.active;
-                    vm.active = data.toLocaleString('ru-RU')
+                    .then(response => response.json())
+                    .then( (data) => {
+                    let active = data.active;
+                    vm.active = active.toLocaleString('ru-RU')
                     });
                 }
                 else if(type == 'recovered'){
                     const vm = this
-                    axios.get('https://coronavirus-19-api.herokuapp.com/countries/Philippines', {
-                        mode: 'no-cors',
-                        headers: {
-                            'Access-Control-Allow-Origin': '*',
-                            'Content-Type': 'application/json'
-                        },
-                        withCredentials: true,
-                        credentials: 'same-origin',
+                    fetch('https://coronavirus-19-api.herokuapp.com/countries/Philippines', {
+                        method: 'GET'
                     })
-                    .then(function (response) {
-                    let data = response.data.recovered;
-                    vm.recovered = data.toLocaleString('ru-RU')
+                    .then( response => response.json())
+                    .then((data) => {
+                        console.log(data)
+                    let recovered = data.recovered;
+                    vm.recovered = recovered.toLocaleString('ru-RU')
                     });
                 }
                 else if(type == 'dead'){
                     const vm = this
-                    axios.get('https://coronavirus-19-api.herokuapp.com/countries/Philippines', {
-                        mode: 'no-cors',
-                        headers: {
-                            'Access-Control-Allow-Origin': '*',
-                            'Content-Type': 'application/json'
-                        },
-                        withCredentials: true,
-                        credentials: 'same-origin',
+                    fetch('https://coronavirus-19-api.herokuapp.com/countries/Philippines', {
+                        method: 'GET'
                     })
-                    .then(function (response) {
-                    let data = response.data.deaths;
-                    vm.dead = data.toLocaleString('ru-RU')
+                    .then(response => response.json())
+                    .then((data) => {
+                        let deaths = data.deaths;
+                        vm.dead = deaths.toLocaleString('ru-RU')
                     });
                 }
                 
@@ -183,23 +163,18 @@ export default {
             changeCases(type){
                 if(type == 'active'){
                     const vm = this
-                    axios.get('https://covid19-api-philippines.herokuapp.com/api/timeline', {
-                        mode: 'no-cors',
-                        headers: {
-                            'Access-Control-Allow-Origin': '*',
-                            'Content-Type': 'application/json'
-                        },
-                        withCredentials: true,
-                        credentials: 'same-origin',
+                    fetch('https://covid19-api-philippines.herokuapp.com/api/timeline', {
+                        method: 'GET'
                     })
-                    .then(function (response) {
-                        let list = response.data.data
-                        let data = list.slice(Math.max(list.length - 10, 1))
+                    .then(response => response.json())
+                    .then((data) => {
+                        let list = data.data
+                        let data_array = list.slice(Math.max(list.length - 10, 1))
                         let arr = []
                         let date = []
-                        for (let index = 0; index < data.length; index++) {
-                                arr.push(data[index].cases)
-                                date.push(data[index].date)
+                        for (let index = 0; index < data_array.length; index++) {
+                                arr.push(data_array[index].cases)
+                                date.push(data_array[index].date)
                         }
                         vm.options = {
                             colors : ['#53818D'],
@@ -219,21 +194,16 @@ export default {
                 }
                 else if(type == 'recovered'){
                     const vm = this
-                    axios.get('https://covid19-api-philippines.herokuapp.com/api/timeline', {
-                        mode: 'no-cors',
-                        headers: {
-                            'Access-Control-Allow-Origin': '*',
-                        },
-                        credentials: 'same-origin',
-                    })
-                    .then(function (response) {
-                        let list = response.data.data
-                        let data = list.slice(Math.max(list.length - 10, 1))
+                    this.getData('https://covid19-api-philippines.herokuapp.com/api/timeline')
+                    .then(response => response.json())
+                    .then((data) => {
+                        let list = data.data
+                        let data_array = list.slice(Math.max(list.length - 10, 1))
                         let arr = []
                         let date = []
-                        for (let index = 0; index < data.length; index++) {
-                                arr.push(data[index].recovered)
-                                date.push(data[index].date)
+                        for (let index = 0; index < data_array.length; index++) {
+                                arr.push(data_array[index].recovered)
+                                date.push(data_array[index].date)
                         }
                         vm.options = {
                             colors : ['#509F83'],
@@ -252,23 +222,18 @@ export default {
                 }
                 else if(type == 'dead'){
                     const vm = this
-                    axios.get('https://covid19-api-philippines.herokuapp.com/api/timeline', {
-                        mode: 'no-cors',
-                        headers: {
-                            'Access-Control-Allow-Origin': '*',
-                            'Content-Type': 'application/json'
-                        },
-                        withCredentials: true,
-                        credentials: 'same-origin',
+                    this.getData('https://covid19-api-philippines.herokuapp.com/api/timeline', {
+                        method: 'GET'
                     })
-                    .then(function (response) {
-                        let list = response.data.data
-                        let data = list.slice(Math.max(list.length - 10, 1))
+                    .then(response => response.json())
+                    .then((data) => {
+                        let list = data.data
+                        let data_array = list.slice(Math.max(list.length - 10, 1))
                         let arr = []
                         let date = []
-                        for (let index = 0; index < data.length; index++) {
-                                arr.push(data[index].died)
-                                date.push(data[index].date)
+                        for (let index = 0; index < data_array.length; index++) {
+                                arr.push(data_array[index].died)
+                                date.push(data_array[index].date)
                         }
                         vm.options = {
                             colors : ['#444444'],

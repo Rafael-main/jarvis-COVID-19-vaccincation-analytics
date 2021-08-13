@@ -27,10 +27,6 @@ window.axios.defaults.withCredentials = true;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-window.axios.defaults.headers.common['Accept'] = 'application/json';
-
-window.axios.defaults.headers.common['Content-Type'] = 'application/json';
-
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

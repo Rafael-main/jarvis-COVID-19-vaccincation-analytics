@@ -21349,62 +21349,47 @@ __webpack_require__.r(__webpack_exports__);
     getCases: function getCases(type) {
       if (type == 'confirmed') {
         var vm = this;
-        axios.get('https://coronavirus-19-api.herokuapp.com/countries/Philippines', {
-          mode: 'no-cors',
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'application/json'
-          },
-          withCredentials: true,
-          credentials: 'same-origin'
+        fetch('https://coronavirus-19-api.herokuapp.com/countries/Philippines', {
+          method: 'GET'
         }).then(function (response) {
-          var data = response.data.cases;
-          vm.totalCases = data.toLocaleString('ru-RU');
+          return response.json();
+        }).then(function (data) {
+          var cases = data.cases;
+          vm.totalCases = cases.toLocaleString('ru-RU');
         });
       } else if (type == 'active') {
         var _vm = this;
 
-        axios.get('https://coronavirus-19-api.herokuapp.com/countries/Philippines', {
-          mode: 'no-cors',
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'application/json'
-          },
-          withCredentials: true,
-          credentials: 'same-origin'
+        fetch('https://coronavirus-19-api.herokuapp.com/countries/Philippines', {
+          method: 'GET'
         }).then(function (response) {
-          var data = response.data.active;
-          _vm.active = data.toLocaleString('ru-RU');
+          return response.json();
+        }).then(function (data) {
+          var active = data.active;
+          _vm.active = active.toLocaleString('ru-RU');
         });
       } else if (type == 'recovered') {
         var _vm2 = this;
 
-        axios.get('https://coronavirus-19-api.herokuapp.com/countries/Philippines', {
-          mode: 'no-cors',
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'application/json'
-          },
-          withCredentials: true,
-          credentials: 'same-origin'
+        fetch('https://coronavirus-19-api.herokuapp.com/countries/Philippines', {
+          method: 'GET'
         }).then(function (response) {
-          var data = response.data.recovered;
-          _vm2.recovered = data.toLocaleString('ru-RU');
+          return response.json();
+        }).then(function (data) {
+          console.log(data);
+          var recovered = data.recovered;
+          _vm2.recovered = recovered.toLocaleString('ru-RU');
         });
       } else if (type == 'dead') {
         var _vm3 = this;
 
-        axios.get('https://coronavirus-19-api.herokuapp.com/countries/Philippines', {
-          mode: 'no-cors',
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'application/json'
-          },
-          withCredentials: true,
-          credentials: 'same-origin'
+        fetch('https://coronavirus-19-api.herokuapp.com/countries/Philippines', {
+          method: 'GET'
         }).then(function (response) {
-          var data = response.data.deaths;
-          _vm3.dead = data.toLocaleString('ru-RU');
+          return response.json();
+        }).then(function (data) {
+          var deaths = data.deaths;
+          _vm3.dead = deaths.toLocaleString('ru-RU');
         });
       }
     },
@@ -21420,23 +21405,19 @@ __webpack_require__.r(__webpack_exports__);
     changeCases: function changeCases(type) {
       if (type == 'active') {
         var vm = this;
-        axios.get('https://covid19-api-philippines.herokuapp.com/api/timeline', {
-          mode: 'no-cors',
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'application/json'
-          },
-          withCredentials: true,
-          credentials: 'same-origin'
+        fetch('https://covid19-api-philippines.herokuapp.com/api/timeline', {
+          method: 'GET'
         }).then(function (response) {
-          var list = response.data.data;
-          var data = list.slice(Math.max(list.length - 10, 1));
+          return response.json();
+        }).then(function (data) {
+          var list = data.data;
+          var data_array = list.slice(Math.max(list.length - 10, 1));
           var arr = [];
           var date = [];
 
-          for (var index = 0; index < data.length; index++) {
-            arr.push(data[index].cases);
-            date.push(data[index].date);
+          for (var index = 0; index < data_array.length; index++) {
+            arr.push(data_array[index].cases);
+            date.push(data_array[index].date);
           }
 
           vm.options = {
@@ -21456,21 +21437,17 @@ __webpack_require__.r(__webpack_exports__);
       } else if (type == 'recovered') {
         var _vm4 = this;
 
-        axios.get('https://covid19-api-philippines.herokuapp.com/api/timeline', {
-          mode: 'no-cors',
-          headers: {
-            'Access-Control-Allow-Origin': '*'
-          },
-          credentials: 'same-origin'
-        }).then(function (response) {
-          var list = response.data.data;
-          var data = list.slice(Math.max(list.length - 10, 1));
+        this.getData('https://covid19-api-philippines.herokuapp.com/api/timeline').then(function (response) {
+          return response.json();
+        }).then(function (data) {
+          var list = data.data;
+          var data_array = list.slice(Math.max(list.length - 10, 1));
           var arr = [];
           var date = [];
 
-          for (var index = 0; index < data.length; index++) {
-            arr.push(data[index].recovered);
-            date.push(data[index].date);
+          for (var index = 0; index < data_array.length; index++) {
+            arr.push(data_array[index].recovered);
+            date.push(data_array[index].date);
           }
 
           _vm4.options = {
@@ -21490,23 +21467,19 @@ __webpack_require__.r(__webpack_exports__);
       } else if (type == 'dead') {
         var _vm5 = this;
 
-        axios.get('https://covid19-api-philippines.herokuapp.com/api/timeline', {
-          mode: 'no-cors',
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Content-Type': 'application/json'
-          },
-          withCredentials: true,
-          credentials: 'same-origin'
+        this.getData('https://covid19-api-philippines.herokuapp.com/api/timeline', {
+          method: 'GET'
         }).then(function (response) {
-          var list = response.data.data;
-          var data = list.slice(Math.max(list.length - 10, 1));
+          return response.json();
+        }).then(function (data) {
+          var list = data.data;
+          var data_array = list.slice(Math.max(list.length - 10, 1));
           var arr = [];
           var date = [];
 
-          for (var index = 0; index < data.length; index++) {
-            arr.push(data[index].died);
-            date.push(data[index].date);
+          for (var index = 0; index < data_array.length; index++) {
+            arr.push(data_array[index].died);
+            date.push(data_array[index].date);
           }
 
           _vm5.options = {
@@ -23825,8 +23798,6 @@ window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")
 window.axios.defaults.baseURL = "http://127.0.0.1:8000";
 window.axios.defaults.withCredentials = true;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-window.axios.defaults.headers.common['Accept'] = 'application/json';
-window.axios.defaults.headers.common['Content-Type'] = 'application/json';
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
