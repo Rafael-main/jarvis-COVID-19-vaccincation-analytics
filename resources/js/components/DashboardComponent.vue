@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="container-fluid p-3 m-0 row">
-                    <div class="card shadow col m-2">
+                    <div class="card col-xl-4 shadow col m-2">
                         <div class="card-body row p-3">
                             <div class="col-5 p-0 m-0  d-flex align-items-center justify-content-end">
                                 <img src="/images/active.png" class="status-img m-0 p-0">
@@ -29,7 +29,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card shadow col m-2">
+                    <div class="card col-xl-3 shadow col m-2">
                         <div class="card-body row p-3">
                             <div class="col-5 p-0 m-0  d-flex align-items-center justify-content-end">
                                 <img src="/images/recovered.png" class="status-img m-0 p-0">
@@ -40,7 +40,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card shadow col m-2">
+                    <div class="card col-xl-4 shadow col m-2">
                         <div class="card-body row p-3">
                             <div class="col-5 p-0 m-0  d-flex align-items-center justify-content-end">
                                 <img src="/images/dead.png" class="status-img m-0 p-0">
@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="graph-div container-fluid pt-2 row p-0 ms-3">
-                    <div class="col-8 m-0 ">
+                    <div class="col-sm-8 col-12 m-0 ">
                         <div class="container row m-2 ms-0 p-1 ps-0">
                             <div class="col">
                                 <div class="btn-group m-1 ms-0" role="group" aria-label="Basic checkbox toggle button group">
@@ -85,7 +85,7 @@
                         </div>
                         
                     </div>
-                    <div class="col-4 mb-0">
+                    <div class="col-sm-4 col-12 mb-0">
                         <div class="card shadow donut-card">
                             <div class="card-body">
                                  <apexchart :options="donut_options" :series="donut_series"></apexchart>
