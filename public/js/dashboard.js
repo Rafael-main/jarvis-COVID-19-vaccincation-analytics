@@ -21237,23 +21237,31 @@ __webpack_require__.r(__webpack_exports__);
     },
     showRegions: function showRegions() {
       var vm = this;
-      axios.get('https://covid19-api-philippines.herokuapp.com/api/top-regions').then(function (response) {
-        vm.regions = response.data.data;
+      fetch('https://covid19-api-philippines.herokuapp.com/api/top-regions', {
+        method: 'GET'
+      }).then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        vm.regions = data.data;
         vm.uppercase();
       });
     },
     defaultActive: function defaultActive() {
       this.series.length = 0;
       var vm = this;
-      axios.get("https://covid19-api-philippines.herokuapp.com/api/timeline?region=".concat(this.regionValue)).then(function (response) {
-        var list = response.data.data;
-        var data = list.slice(Math.max(list.length - 10, 1));
+      fetch("https://covid19-api-philippines.herokuapp.com/api/timeline?region=".concat(this.regionValue), {
+        method: 'GET'
+      }).then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        var list = data.data;
+        var data_array = list.slice(Math.max(list.length - 10, 1));
         var arr = [];
         var date = [];
 
-        for (var index = 0; index < data.length; index++) {
-          arr.push(data[index].cases);
-          date.push(data[index].date);
+        for (var index = 0; index < data_array.length; index++) {
+          arr.push(data_array[index].cases);
+          date.push(data_array[index].date);
         }
 
         vm.options = {
@@ -21270,15 +21278,19 @@ __webpack_require__.r(__webpack_exports__);
     showActiveCases: function showActiveCases(event) {
       if (event.target.checked) {
         var vm = this;
-        axios.get("https://covid19-api-philippines.herokuapp.com/api/timeline?region=".concat(this.regionValue)).then(function (response) {
-          var list = response.data.data;
-          var data = list.slice(Math.max(list.length - 10, 1));
+        fetch("https://covid19-api-philippines.herokuapp.com/api/timeline?region=".concat(this.regionValue), {
+          method: 'GET'
+        }).then(function (response) {
+          return response.json();
+        }).then(function (data) {
+          var list = data.data;
+          var data_array = list.slice(Math.max(list.length - 10, 1));
           var arr = [];
           var date = [];
 
-          for (var index = 0; index < data.length; index++) {
-            arr.push(data[index].cases);
-            date.push(data[index].date);
+          for (var index = 0; index < data_array.length; index++) {
+            arr.push(data_array[index].cases);
+            date.push(data_array[index].date);
           }
 
           vm.options = {
@@ -21306,15 +21318,19 @@ __webpack_require__.r(__webpack_exports__);
     showRecoveredCases: function showRecoveredCases(event) {
       if (event.target.checked) {
         var vm = this;
-        axios.get("https://covid19-api-philippines.herokuapp.com/api/timeline?region=".concat(this.regionValue)).then(function (response) {
-          var list = response.data.data;
-          var data = list.slice(Math.max(list.length - 10, 1));
+        fetch("https://covid19-api-philippines.herokuapp.com/api/timeline?region=".concat(this.regionValue), {
+          method: 'GET'
+        }).then(function (response) {
+          return response.json();
+        }).then(function (data) {
+          var list = data.data;
+          var data_array = list.slice(Math.max(list.length - 10, 1));
           var arr = [];
           var date = [];
 
-          for (var index = 0; index < data.length; index++) {
-            arr.push(data[index].recovered);
-            date.push(data[index].date);
+          for (var index = 0; index < data_array.length; index++) {
+            arr.push(data_array[index].recovered);
+            date.push(data_array[index].date);
           }
 
           vm.options = {
@@ -21340,15 +21356,19 @@ __webpack_require__.r(__webpack_exports__);
     showDeadCases: function showDeadCases(event) {
       if (event.target.checked) {
         var vm = this;
-        axios.get("https://covid19-api-philippines.herokuapp.com/api/timeline?region=".concat(this.regionValue)).then(function (response) {
-          var list = response.data.data;
-          var data = list.slice(Math.max(list.length - 10, 1));
+        fetch("https://covid19-api-philippines.herokuapp.com/api/timeline?region=".concat(this.regionValue), {
+          method: 'GET'
+        }).then(function (response) {
+          return response.json();
+        }).then(function (data) {
+          var list = data.data;
+          var data_array = list.slice(Math.max(list.length - 10, 1));
           var arr = [];
           var date = [];
 
-          for (var index = 0; index < data.length; index++) {
-            arr.push(data[index].died);
-            date.push(data[index].date);
+          for (var index = 0; index < data_array.length; index++) {
+            arr.push(data_array[index].died);
+            date.push(data_array[index].date);
           }
 
           vm.options = {
@@ -21810,6 +21830,8 @@ try {
 
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+window.axios.defaults.baseURL = "http://127.0.0.1:8000";
+window.axios.defaults.withCredentials = true;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

@@ -1,8 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+
+$input-height-border: 2rem;
+$input-padding-x: 1.25rem;
+
+$form-floating-height:            add(3.5rem, $input-height-border);
+$form-floating-line-height:       1.25;
+$form-floating-padding-x:         $input-padding-x;
+$form-floating-padding-y:         1rem;
+$form-floating-input-padding-t:   1.625rem;
+$form-floating-input-padding-b:   .625rem;
+$form-floating-label-opacity:     .65;
+$form-floating-label-transform:   scale(.85) translateY(-.5rem) translateX(.15rem);
+$form-floating-transition:        opacity .1s ease-in-out, transform .1s ease-in-out;
+
+
+.form-control:focus {
+  border-color: #0dffb5;
+  box-shadow: inset 0 1px 1px rgba(13, 255, 181, 1), 0 0 8px rgba(13, 255, 181, 1);
+}
+
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 // Variables
-@import 'variables';
+@import '../../node_modules/bootstrap/scss/_functions.scss';
+@import '../../node_modules/bootstrap/scss/_variables.scss';
 
+$custom-theme-colors: (
+    "indigo": $indigo,
+    "blue": $blue,
+    "purple": $purple,
+    "pink": $pink,
+    "red": $red,
+    "green": $green,
+    "teal": $teal,
+    "cyan": $cyan,
+    "gray": $gray-500,
+    "gray-dark": $gray-800,
+    "jarvisgreen": #0dffb5,
+    "altlight": #f2ebfa,
+    "altdark": #522192,
+    "lightgreen": #DDF560,
+    "yellow": #FEFA33,
+    "lightorange": #F9D73F,
+    "orange": #FCAD35,
+    "lightred": #FD7A7A
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+//change local directory before enabling Live SASS Compiler
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
