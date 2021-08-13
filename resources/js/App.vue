@@ -8,7 +8,6 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <!-- <a class="nav-link" aria-current="page" href="#">Home</a> -->
                         <router-link class="nav-link" aria-current="page" :to="{name: 'Home'}">
                             Home
                         </router-link>
@@ -23,13 +22,18 @@
             </div>
         </div>
     </nav>
+    <Home />
     <div class="mt-5">
         <router-view />
     </div>
 </template>
 
 <script>
+import Home from './views/Home.vue'
 export default {
+  components: { 
+      Home
+    },
     name: "App",
     data() {
         return {
@@ -64,16 +68,12 @@ export default {
     .nav-item{
         margin-right:1em;
     }
-
     .change_color_link a{
         color:white !important;
     }
-
     .change_color_link a:hover{
         color:rgb(209, 208, 208) !important;
-
     }
-
     .change_color{
         color:white !important;
         background-color:#00ce8b;

@@ -35,9 +35,7 @@
                             </div>
                         </div>
                    </button>
-                   <button class="btn btn-lg view-btn p-3">
-                        View More Data
-                   </button>
+                   <a href="/dashboard" class="btn btn-lg view-btn p-3">View More Data</a>
                    
                </div>
             </div>
