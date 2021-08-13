@@ -1,6 +1,4 @@
 <template>
-        
-        <!-- DUMMY NAVBAR KAY ARON MATANSYA ANG SUKOD SA NAVBAR UG SIDE BAR -->
         <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
             <div class="container-fluid nav">
 
@@ -14,170 +12,26 @@
         <div class="sidebar fixed-left" v-if="isOpen">
             <transition name="slide">
                 <div v-if="isOpen"
-                    class="sidebar-panel">
+                    class="sidebar-panel col">
                     <slot class="mt-5">
                         <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-muted mt-3" style="width: 300px;">
-                        <div class="list-group list-group-flush border-bottom scrollarea mt-5">
-                            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" name="one">
-                                <div class="row">
-                                <div class="col-2 align-content-center justify-content-center mt-4">
-                                    <h1>1</h1>
-                                </div>
-                                <div class="col-10">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <strong class="mb-1">Place <br> <span class="text-danger fs-3 center">9999999</span></strong>
+                            <div class="list-group list-group-flush border-bottom scrollarea mt-5">
+                                <a href="#" v-for="place in worldCases" :key="place.country" class="list-group-item list-group-item-action py-3 lh-tight" name="one">
+                                    <div class="row">
+                                        <div class="col-2 me-2 align-content-center justify-content-center mt-4">
+                                            <h1>{{ place.id }}</h1>
                                         </div>
-                                        <div class="mb-1 small">
-                                            Death: <span></span> <br>
-                                            Recovered: <span></span>
+                                        <div class="col">
+                                            <div class="d-flex w-100 align-items-center justify-content-between">
+                                                <strong class="mb-1">{{ place.country }} <br> <span class="text-danger fs-3 center">{{ place.cases }}</span></strong>
+                                                </div>
+                                                <div class="mb-1 small">
+                                                    Death:<span> {{ place.deaths }}</span> <br>
+                                                    Recovered: <span>{{ place.recovered }}</span>
+                                                </div>
                                         </div>
-                                </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" name="two">
-                                <div class="row">
-                                <div class="col-2 align-content-center justify-content-center mt-4">
-                                    <h1>2</h1>
-                                </div>
-                                <div class="col-10">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <strong class="mb-1">Place <br> <span class="text-danger fs-3">9999999</span></strong>
-                                        </div>
-                                        <div class="mb-1 small">
-                                            Death: <span></span> <br>
-                                            Recovered: <span></span>
-                                        </div>
-                                </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" name="three">
-                                <div class="row">
-                                <div class="col-2 align-content-center justify-content-center mt-4">
-                                    <h1>3</h1>
-                                </div>
-                                <div class="col-10">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <strong class="mb-1">Place <br> <span class="text-danger fs-3">9999999</span></strong>
-                                        </div>
-                                        <div class="mb-1 small">
-                                            Death: <span></span> <br>
-                                            Recovered: <span></span>
-                                        </div>
-                                </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" name="four">
-                                <div class="row">
-                                <div class="col-2 align-content-center justify-content-center mt-4">
-                                    <h1>4</h1>
-                                </div>
-                                <div class="col-10">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <strong class="mb-1">Place <br> <span class="text-danger fs-3">9999999</span></strong>
-                                        </div>
-                                        <div class="mb-1 small">
-                                            Death: <span></span> <br>
-                                            Recovered: <span></span>
-                                        </div>
-                                </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" name="five">
-                                <div class="row">
-                                <div class="col-2 align-content-center justify-content-center mt-4">
-                                    <h1>5</h1>
-                                </div>
-                                <div class="col-10">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <strong class="mb-1">Place <br> <span class="text-danger fs-3">9999999</span></strong>
-                                        </div>
-                                        <div class="mb-1 small">
-                                            Death: <span></span> <br>
-                                            Recovered: <span></span>
-                                        </div>
-                                </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" name="six">
-                                <div class="row">
-                                <div class="col-2 align-content-center justify-content-center mt-4">
-                                    <h1>6</h1>
-                                </div>
-                                <div class="col-10">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <strong class="mb-1">Place <br> <span class="text-danger fs-3">9999999</span></strong>
-                                        </div>
-                                        <div class="mb-1 small">
-                                            Death: <span></span> <br>
-                                            Recovered: <span></span>
-                                        </div>
-                                </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" name="seven">
-                                <div class="row">
-                                <div class="col-2 align-content-center justify-content-center mt-4">
-                                    <h1>7</h1>
-                                </div>
-                                <div class="col-10">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <strong class="mb-1">Place <br> <span class="text-danger fs-3">9999999</span></strong>
-                                        </div>
-                                        <div class="mb-1 small">
-                                            Death: <span></span> <br>
-                                            Recovered: <span></span>
-                                        </div>
-                                </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" name="eight">
-                                <div class="row">
-                                <div class="col-2 align-content-center justify-content-center mt-4">
-                                    <h1>8</h1>
-                                </div>
-                                <div class="col-10">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <strong class="mb-1">Place <br> <span class="text-danger fs-3">9999999</span></strong>
-                                        </div>
-                                        <div class="mb-1 small">
-                                            Death: <span></span> <br>
-                                            Recovered: <span></span>
-                                        </div>
-                                </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" name="nine">
-                                <div class="row">
-                                <div class="col-2 align-content-center justify-content-center mt-4">
-                                    <h1>9</h1>
-                                </div>
-                                <div class="col-10">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <strong class="mb-1">Place <br> <span class="text-danger fs-3">9999999</span></strong>
-                                        </div>
-                                        <div class="mb-1 small">
-                                            Death: <span></span> <br>
-                                            Recovered: <span></span>
-                                        </div>
-                                </div>
-                                </div>
-                            </a>
-                            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" name="ten">
-                                <div class="row">
-                                <div class="col-2 align-content-center justify-content-center mt-4">
-                                    <h1>10</h1>
-                                </div>
-                                <div class="col-10">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <strong class="mb-1">Place <br> <span class="text-danger fs-3">9999999</span></strong>
-                                        </div>
-                                        <div class="mb-1 small">
-                                            Death: <span></span> <br>
-                                            Recovered: <span></span>
-                                        </div>
-                                </div>
-                                </div>
-                            </a>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </slot>
@@ -198,34 +52,55 @@
         components: { DashboardComponent},
         data(){
             return {
-                isOpen: false
+                isOpen: false,
+                worldCases:[]
             }
+        },
+        mounted(){
+            this.showWorldData()
         },
         methods: {
             toggleSidebar(){
-                console.log("Ads")
                 if (this.isOpen == false){
                     this.isOpen = true
                 }else{
                     this.isOpen = false
                 }
             },
+            showWorldData(){
+                 const vm = this
+                    axios.get('https://coronavirus-19-api.herokuapp.com/countries')
+                    .then(function (response) {
+                        let array = response.data
+                        for (let index = 0; index < array.length; index++) {
+                            array[index].id = index + 1
+                            array[index].cases = array[index].cases.toLocaleString('ru-RU')
+                            array[index].deaths = array[index].deaths.toLocaleString('ru-RU')
+                            if (array[index].recovered == null) {
+                                array[index].recovered = array[index].recovered
+                            }else{
+                                array[index].recovered = array[index].recovered.toLocaleString('ru-RU')
+                            }
+                            
+                        }
+                        vm.worldCases = array
+                    });
+            }
         }
     }
 </script>
-<style>
-    .sidebar-panel{
-        display: block;
-        height: 100px;
-        overflow-y: scroll;
-    }
-</style>
+
 
 <style scoped>
     .sidebar, .sidebar-panel {
         margin-right: auto !important;
-         height: 100vh;
-         width: auto;
-         float: left;
+        height: 120vh;
+        width: auto;
+        float: left;
+        display: block;
+        overflow-y: scroll;
+        position:fixed;
+        z-index:1;
     }
+
 </style>
