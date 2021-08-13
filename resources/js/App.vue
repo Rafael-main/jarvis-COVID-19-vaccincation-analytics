@@ -22,7 +22,7 @@
             </div>
         </div>
     </nav>
-    <Home />
+    <!-- <Home /> -->
     <div class="mt-5">
         <router-view />
     </div>
