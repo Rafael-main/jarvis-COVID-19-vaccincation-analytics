@@ -98,8 +98,7 @@
         width: auto;
         float: left;
         display: block;
-        overflow-y: scroll;
-        position:fixed;
+        overflow-y: auto;
         z-index:2;
     }
 
