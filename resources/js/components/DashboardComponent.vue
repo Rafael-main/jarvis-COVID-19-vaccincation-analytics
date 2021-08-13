@@ -256,7 +256,7 @@
                         let data_array = list.slice(Math.max(list.length - 10, 1))
                         let arr = []
                         let date = []
-                        for (let index = 0; index < data.length; index++) {
+                        for (let index = 0; index < data_array.length; index++) {
                                 arr.push(data_array[index].cases)
                                 date.push(data_array[index].date)
                         }

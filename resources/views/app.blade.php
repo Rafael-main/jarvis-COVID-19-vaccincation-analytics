@@ -6,12 +6,15 @@
 
         <title>Jarvis COVID-19 & Vaccination Tracker</title>
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        {{-- icons --}}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">    
-            
+        {{-- styles --}}
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
+        {{-- map --}}
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+
     </head>
     <body class="antialiased">
         <div id="app"></div>
