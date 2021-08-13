@@ -135,9 +135,8 @@ export default {
                     })
                     .then( response => response.json())
                     .then((data) => {
-                        console.log(data)
-                    let recovered = data.recovered;
-                    vm.recovered = recovered.toLocaleString('ru-RU')
+                        let recovered = data.recovered;
+                        vm.recovered = recovered.toLocaleString('ru-RU')
                     });
                 }
                 else if(type == 'dead'){
@@ -192,7 +191,9 @@ export default {
                 }
                 else if(type == 'recovered'){
                     const vm = this
-                    this.getData('https://covid19-api-philippines.herokuapp.com/api/timeline')
+                    fetch('https://covid19-api-philippines.herokuapp.com/api/timeline', {
+                        method: 'GET'
+                    })
                     .then(response => response.json())
                     .then((data) => {
                         let list = data.data
@@ -220,7 +221,7 @@ export default {
                 }
                 else if(type == 'dead'){
                     const vm = this
-                    this.getData('https://covid19-api-philippines.herokuapp.com/api/timeline', {
+                    fetch('https://covid19-api-philippines.herokuapp.com/api/timeline', {
                         method: 'GET'
                     })
                     .then(response => response.json())

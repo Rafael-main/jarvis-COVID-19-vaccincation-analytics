@@ -21669,7 +21669,6 @@ __webpack_require__.r(__webpack_exports__);
         }).then(function (response) {
           return response.json();
         }).then(function (data) {
-          console.log(data);
           var recovered = data.recovered;
           _vm2.recovered = recovered.toLocaleString('ru-RU');
         });
@@ -21730,7 +21729,9 @@ __webpack_require__.r(__webpack_exports__);
       } else if (type == 'recovered') {
         var _vm4 = this;
 
-        this.getData('https://covid19-api-philippines.herokuapp.com/api/timeline').then(function (response) {
+        fetch('https://covid19-api-philippines.herokuapp.com/api/timeline', {
+          method: 'GET'
+        }).then(function (response) {
           return response.json();
         }).then(function (data) {
           var list = data.data;
@@ -21760,7 +21761,7 @@ __webpack_require__.r(__webpack_exports__);
       } else if (type == 'dead') {
         var _vm5 = this;
 
-        this.getData('https://covid19-api-philippines.herokuapp.com/api/timeline', {
+        fetch('https://covid19-api-philippines.herokuapp.com/api/timeline', {
           method: 'GET'
         }).then(function (response) {
           return response.json();
